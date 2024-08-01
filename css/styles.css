@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /************* Primary ************/
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --deep-green: hsl(154, 61%, 37%);
+
+  /****************** Accent ************/
+  --blue: hsl(248, 32%, 49%);
+
+  /************ Neutral ************/
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--red);
+  background-image: url("../images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 3rem;
+  border-radius: 10px;
+  background-color: var(--blue);
+  box-shadow: 0px 5px 1px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/*********** FORM ***********/
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+form div {
+  position: relative;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  padding: 1rem 1.2rem;
+  width: 100%;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+  color: var(--dark-blue);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+input:focus {
+  border: 1px solid var(--dark-blue);
+  outline: none;
+}
+
+input::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-blue);
+}
+
+/*********** BUTTON *********/
+button {
+  color: white;
+  background-color: var(--green);
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  box-shadow: 0px 4px 1px 0px var(--deep-green);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button.hover-effect:hover {
+  background-color: var(--deep-green);
+  box-shadow: 0px 4px 1px 0px var(--green);
+}
+
+.button-info {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.button-info span {
+  line-height: 2rem;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/*************** ERROR MESSAGES *************/
+input.border-color {
+  border: 1px solid var(--red);
+  outline: none;
+}
+
+#error-icon {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 88%;
+  transform: translateY(-70%);
+}
+
+.error-msg,
+.error-msg2 {
+  display: none;
+  margin: 0.2rem;
+  color: var(--red);
+  font-style: italic;
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: end;
+}
+
+.error-msg.display,
+.error-msg2.display,
+#error-icon.display {
+  display: block;
+}
+
+/************ RESPONSIVENESS ***********/
+@media only screen and (min-width: 950px) {
+  body {
+    margin: 0;
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+
+  main {
+    flex-direction: row;
+    max-width: 900px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about {
+    width: 100%;
+    text-align: start;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .sign-up-details {
+    width: 100%;
+  }
+}
+
+/********* LINK TO SOCIAL MEDIA ***************/
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
