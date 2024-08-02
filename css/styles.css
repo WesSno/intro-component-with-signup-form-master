@@ -212,6 +212,10 @@ input.border-color {
   .sign-up-details {
     width: 100%;
   }
+
+  .button-info {
+    padding: 0 2.5rem;
+  }
 }
 
 /********* LINK TO SOCIAL MEDIA ***************/

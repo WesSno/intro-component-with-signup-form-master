@@ -140,18 +140,21 @@ submitBtn.addEventListener("click", (e) => {
 
       if (inputField.id === "l-name") {
         errorMsg[1].classList.remove("display");
+        errorMsg2[1].classList.remove("display");
         errorIcon[1].classList.remove("display");
         inputFields[1].classList.remove("border-color");
       }
 
       if (inputField.id === "email") {
         errorMsg[2].classList.remove("display");
+        errorMsg2[2].classList.remove("display");
         errorIcon[2].classList.remove("display");
         inputFields[2].classList.remove("border-color");
       }
 
       if (inputField.id === "password") {
         errorMsg[3].classList.remove("display");
+        errorMsg2[3].classList.remove("display");
         errorIcon[3].classList.remove("display");
         inputFields[3].classList.remove("border-color");
       }
