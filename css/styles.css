@@ -160,7 +160,7 @@ input.border-color {
   outline: none;
 }
 
-#alert-img {
+#alert {
   display: none;
   position: absolute;
   top: 40%;
@@ -181,7 +181,7 @@ input.border-color {
 
 .error-msg.display,
 .error-msg2.display,
-#alert-img.display {
+#alert.display {
   display: block;
 }
 
